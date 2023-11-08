@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Text, ActivityIndicator } from 'react-native';
 import CustomButton from './components/common/UIButton/ClassicButton.jsx';
 import * as Font from 'expo-font';
+import BottomNavigation from './components/naviagtion/ButtomNavigation.js';
 
 const App = () => {
   const [fontsLoaded, setFontsLoaded] = useState(false);
@@ -40,11 +41,7 @@ const App = () => {
 
   return (
     <View style={styles.container}>
-      <CustomButton label="Primary" onPress={() => alert('Primary Button Pressed')} />
-      <CustomButton type="secondary" label="Secondary" onPress={() => alert('Secondary Button Pressed')} />
-      <CustomButton type="outline" label="Outline" onPress={() => alert('Outline Button Pressed')} />
-      <CustomButton size="small" label="Small" onPress={() => alert('Small Button Pressed')} />
-      <CustomButton size="large" label="Large" onPress={() => alert('Large Button Pressed')} />
+      
     </View>
   );
 };

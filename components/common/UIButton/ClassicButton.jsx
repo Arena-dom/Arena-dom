@@ -2,6 +2,9 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 import { theme } from '../../../themes/theme.js';
+import { colors } from '../../../constants/Colors/colors.js';
+import {sizes}   from '../../../constants/Sizes/sizes.js'
+
 
 const ClassicButton = ({ type = 'primary', size = 'medium', label, onPress }) => {
   const buttonStyle = [
@@ -30,7 +33,7 @@ const styles = StyleSheet.create({
   
   },
   primary: {
-    backgroundColor: '#3498db',
+    backgroundColor: colors.accent,
    
   },
   secondary: {
@@ -55,7 +58,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#fff',
-    fontSize: 16,
+    fontSize: sizes.fontXL,
     fontFamily: theme.fonts.bodyBold,
 
   },

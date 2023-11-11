@@ -1,7 +1,12 @@
 export const colors = {
-    primary: '#004aad',       // Primary color for your app
-    secondary: '#ff5733',     // Secondary color
-    accent: '#4caf50',        // Accent color for highlighting elements
+    primaryOne: '#003366', 
+    primatySecond: "#02C386",
+    primaryThird: "#000",     
+    secondaryOne: '#64B5F6',
+    secondarySecond: "FAFAFA",
+    accentOne: '##FFC107',
+    accentSecond: "#02C386",
+    accentThird: "#64B5F6",     
     background: '#f5f5f5',    // Background color
     text: '#333333',          // Primary text color
     textSecondary: '#ffffff', // Secondary text color (for use on dark backgrounds)

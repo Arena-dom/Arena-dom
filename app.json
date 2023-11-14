@@ -11,8 +11,10 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+ 
     "assetBundlePatterns": [
-      "**/*"
+      "**/*",
+      "assets/videos/*"
     ],
     "ios": {
       "supportsTablet": true

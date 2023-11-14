@@ -1,8 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Text, ActivityIndicator } from 'react-native';
-import CustomButton from './components/common/UIButton/ClassicButton.jsx';
+
+
 import * as Font from 'expo-font';
-import BottomNavigation from './components/naviagtion/ButtomNavigation.js';
+import HomeScreen from './screens/Homescreen/HomeScreen';
+import ClassicButton from './components/common/UIButton/ClassicButton';
+import NavBar from './components/common/NavBar';
+import Avatar from './components/common/Avarta';
+import SearchBar from './components/common/SearchBar';
+import ReelsVideoComponent from './components/media/ReelsVideoComponent';
+import StatsCard from './components/common/StartsCard';
+import Tabs from './components/common/Tabs';
+import InteractiveBarComponent from './components/media/InteractiveBarComponent';
+
+
 
 const App = () => {
   const [fontsLoaded, setFontsLoaded] = useState(false);
@@ -41,7 +52,7 @@ const App = () => {
 
   return (
     <View style={styles.container}>
-      
+        <HomeScreen />
     </View>
   );
 };
@@ -49,9 +60,11 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: 50,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#fff', // Added background color for better visibility
+    alignItems: 'stretch',
   },
 });
 

@@ -1,0 +1,91 @@
+const BASE_URL = 'https://your-api-domain.com';
+
+interface ApiEndpoints {
+  login: string;
+  register: string;
+  logout: string;
+  refreshToken: string;
+
+  playerProfile: (playerId: string) => string;
+  playerList: string;
+  updatePlayerProfile: (playerId: string) => string;
+  uploadPlayerVideo: (playerId: string) => string;
+  playerStats: (playerId: string) => string;
+
+  agentProfile: (agentId: string) => string;
+  searchPlayers: string;
+  contactPlayer: string;
+  agentList: string;
+
+  teamProfile: (teamId: string) => string;
+  teamList: string;
+  updateTeamProfile: (teamId: string) => string;
+
+  playerRankings: string;
+  teamRankings: string;
+  overallStats: string;
+
+  fetchMessages: (conversationId: string) => string;
+  sendMessage: string;
+  chatHistory: string;
+
+  videoLibrary: string;
+  videoDetails: (videoId: string) => string;
+  uploadVideo: string;
+
+  notifications: string;
+  markNotificationRead: (notificationId: string) => string;
+
+  userProfile: (userId: string) => string;
+  updateUserProfile: (userId: string) => string;
+  deleteUser: (userId: string) => string;
+
+  feedback: string;
+  systemSettings: string;
+  // ... Add any additional endpoints specific to your app's functionality
+}
+
+export const apiEndpoints: ApiEndpoints = {
+  login: `${BASE_URL}/auth/login`,
+  register: `${BASE_URL}/auth/register`,
+  logout: `${BASE_URL}/auth/logout`,
+  refreshToken: `${BASE_URL}/auth/refresh`,
+
+  playerProfile: (playerId) => `${BASE_URL}/players/${playerId}`,
+  playerList: `${BASE_URL}/players`,
+  updatePlayerProfile: (playerId) => `${BASE_URL}/players/${playerId}/update`,
+  uploadPlayerVideo: (playerId) => `${BASE_URL}/players/${playerId}/uploadVideo`,
+  playerStats: (playerId) => `${BASE_URL}/players/${playerId}/stats`,
+
+  agentProfile: (agentId) => `${BASE_URL}/agents/${agentId}`,
+  searchPlayers: `${BASE_URL}/agents/searchPlayers`,
+  contactPlayer: `${BASE_URL}/agents/contact`,
+  agentList: `${BASE_URL}/agents`,
+
+  teamProfile: (teamId) => `${BASE_URL}/teams/${teamId}`,
+  teamList: `${BASE_URL}/teams`,
+  updateTeamProfile: (teamId) => `${BASE_URL}/teams/${teamId}/update`,
+
+  playerRankings: `${BASE_URL}/rankings/players`,
+  teamRankings: `${BASE_URL}/rankings/teams`,
+  overallStats: `${BASE_URL}/stats/overall`,
+
+  fetchMessages: (conversationId) => `${BASE_URL}/chat/${conversationId}`,
+  sendMessage: `${BASE_URL}/chat/send`,
+  chatHistory: `${BASE_URL}/chat/history`,
+
+  videoLibrary: `${BASE_URL}/videos/library`,
+  videoDetails: (videoId) => `${BASE_URL}/videos/${videoId}`,
+  uploadVideo: `${BASE_URL}/videos/upload`,
+
+  notifications: `${BASE_URL}/notifications`,
+  markNotificationRead: (notificationId) => `${BASE_URL}/notifications/${notificationId}/read`,
+
+  userProfile: (userId) => `${BASE_URL}/users/${userId}`,
+  updateUserProfile: (userId) => `${BASE_URL}/users/${userId}/update`,
+  deleteUser: (userId) => `${BASE_URL}/users/${userId}/delete`,
+
+  feedback: `${BASE_URL}/feedback`,
+  systemSettings: `${BASE_URL}/settings`,
+  // ... Add any additional endpoints specific to your app's functionality
+};
